@@ -32,10 +32,6 @@ my $socket = IO::Socket::INET->new(
 ) or error("bot", "Connection to ".config('server', 'host')." failed.\n");
 
 
-# Connect!
-#irc_connect();
-
-
 # Throw the program into an infinite while loop
 while (1) {
 	$data = <$socket>;
@@ -104,23 +100,7 @@ while (1) {
 	 }
 
 
-    if ($ex[0] eq 'CAPAB' and $ex[1] eq 'MODULES' and lc(config('server', 'ircd')) eq 'inspircd') {
-        # stop if m_invisible is loaded, this will not be removed - so don't ask
-        if ($data =~ m/m_invisible.so/) {
-	     send_sock("QUIT :m_invisible.so appears to be loaded on this server. We do not allow our bot to be used on such networks!");
-            error("bot", "We forbid the use of TIRCu with InspIRCd with m_invisible.so loaded, please unload it then try again!");
-        }
-        # check for m_servprotect
-        if ($data =~ m/m_servprotect.so/) {
-            $INSPIRCD_SERVICE_PROTECT_MOD = 1;
-        }
-    }
-    # InspIRCd: CAPAB END recieved
-     elsif ($ex[0] eq 'CAPAB' and $ex[1] eq 'END' and lc(config('server', 'ircd')) eq 'inspircd') {
-    #     if ($INSPIRCD_SERVICE_PROTECT_MOD != 1) {
-    #         error("tircu", "When using TIRCu with InspIRCd, m_servprotect.so is needed, please load it and try again!");
-    #     }
-    	   $socket->send("JOIN ".config('me', 'chan'));
+     	   $socket->send("JOIN ".config('me', 'chan'));
     	   print("[BOT-RAW] JOIN ".config('me', 'chan')."\r\n");
     	   $socket->send("PRIVMSG ".config('me', 'chan')." :[DEB] Recieved CAPAB END");
     	   print("[BOT-RAW] PRIVMSG ".config('me', 'chan')." :[DEB] Recieved CAPAB END \r\n");
