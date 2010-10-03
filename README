@@ -1,0 +1,50 @@
+                README
+---------------------------------------
+
+TABLE OF CONTENTS
+-----------------
+  1. Credits
+  2. Description
+  3. Installation
+  4. Getting support
+  5. Reporting bugs
+
+1. CREDITS
+----------
+
+pBot is developed by Russell M Bradford
+The Following people have contributed their code or knowledge to this project
+
+Elijah "starcoder" Perrault - Contributed some of his knowledge
+
+
+2. DESCRIPTION
+--------------
+
+pBot is a modular IRC Bot coded in Perl that can perform many helpful
+tasks to make everyday irc'ing easier or fun.
+
+ATTENTION: By using this software, you are stating
+that you have read and agreed to the terms in LICENSE.
+
+3. INSTALLATION
+---------------
+
+No Installation is needed yet! All you need to do once downloaded is run 'nohup perl run.pl > bot.log &' :)
+
+4. GETTING SUPPORT
+------------------
+
+Should you need any help with pBot, please drop by
+our IRC chatroom:
+
+Host: irc.connecttek.net
+Port: 6667 | SSL: 6697
+Channel: #fml
+
+
+5. REPORTING BUGS
+-----------------
+
+Should you come across a bug within the original code, please
+report it to us by visiting our IRC ChatRoom stated above
