@@ -21,6 +21,12 @@ sub irc_onchanjoin {
 	&pBot::Functions::MSG($chan,"I have joined ".$chan."");
 }
 
+sub irc_onchanpart {
+	my($chan) = @_;
+ 	chomp($chan);
+	# Reserved for Future Use
+}
+
 sub irc_onchaninvite {
 	my($chan) = @_;
  	chomp($chan);
@@ -32,7 +38,7 @@ sub irc_onchankick {
 	my($chan) = @_;
  	chomp($chan);
 	&pBot::Functions::JOIN($chan,"null");
-	&pBot::Functions::MSG($chan,"Hey, don't fucking kick me you retard!");
+	&pBot::Functions::MSG($chan,"Hey, don't kick me you retard!");
 }
 
 sub irc_onprivmsg {

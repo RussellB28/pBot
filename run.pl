@@ -17,7 +17,7 @@ our $c_netop;
 
 # Get configuration values
 my $conf = Config::Scoped->new(
-    file => "bot.conf",
+    file => "data/bot.conf",
 ) or error("bot", "We couldn't open the config file!\n");
 
 # Put them into variables	
@@ -65,6 +65,11 @@ while (1) {
         if ($ex[1] eq "JOIN") {
 		$ex[2] =~ s/://g;
 		&pBot::CallBacks::irc_onchanjoin($ex[2]);
+	 }
+
+        if ($ex[1] eq "PART") {
+		$ex[2] =~ s/://g;
+		&pBot::CallBacks::irc_onchanpart($ex[2]);
 	 }
 
         if ($ex[1] eq "INVITE") {
