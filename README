@@ -30,7 +30,7 @@ that you have read and agreed to the terms in LICENSE.
 3. INSTALLATION
 ---------------
 
-No Installation is needed yet! All you need to do once downloaded is run 'nohup perl run.pl > bot.log &' :)
+See docs/INSTALL for information on how to install pBot
 
 4. GETTING SUPPORT
 ------------------

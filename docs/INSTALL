@@ -1,0 +1,18 @@
+----------------------------------------
+             INSTALLATION
+----------------------------------------
+
+Before running pBot, you MUST run the configuration utility to check that you have all the required modules.
+To do this use:
+
+./configure
+
+If all required CPAN modules are working and exist, you are ready to start using pBot.
+Before you do, you will need to edit the following files:
+
+* bot.conf
+
+Once you have edited all the required files, you are then ready to run pBot!
+To do this use the recommended command:
+
+'nohup perl run.pl > bot.log &'
