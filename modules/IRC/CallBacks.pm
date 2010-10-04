@@ -72,11 +72,6 @@ sub irc_onprivmsg {
 	{
 		&pBot::Commands::cmd_stest($owner,$chan,$cmd,$message);
 	}
-
-	if($cmd=~ m/!netops/)
-	{
-		&pBot::Commands::cmd_netops($owner,$chan,$cmd,$message);
-	}
 }
 
 sub irc_onping {

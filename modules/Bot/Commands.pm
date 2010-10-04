@@ -55,14 +55,4 @@ sub cmd_stest {
 	&pBot::Functions::MSG($chan,"4[SERVER-CMD] Connection to ".&pBot::config('server','host')." is still established");
 }
 
-sub cmd_netops {
-	my($owner,$chan,$cmd,$message) = @_;
- 	chomp($owner);
- 	chomp($chan);
- 	chomp($cmd);
- 	chomp($message);
-	$pBot::c_netop = $chan;
-	&pBot::Functions::OPERSTATS();
-}
-
 1;

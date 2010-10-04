@@ -31,8 +31,4 @@ sub PART {
 	&pBot::send_sock("PART ".$chan." ".$reason."\n");
 }
 
-sub OPERSTATS {
-	&pBot::send_sock("STATS P\n");
-}
-
 1;
