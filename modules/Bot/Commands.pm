@@ -55,4 +55,14 @@ sub cmd_stest {
 	&pBot::Functions::MSG($chan,"4[SERVER-CMD] Connection to ".&pBot::config('server','host')." is still established");
 }
 
+sub cmd_dns {
+	my($owner,$chan,$cmd,$message) = @_;
+ 	chomp($owner);
+ 	chomp($chan);
+ 	chomp($cmd);
+ 	chomp($message);
+
+	&pBot::DNS::get_record_a($owner,$chan,$cmd,$message);
+}
+
 1;

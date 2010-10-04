@@ -72,6 +72,11 @@ sub irc_onprivmsg {
 	{
 		&pBot::Commands::cmd_stest($owner,$chan,$cmd,$message);
 	}
+
+	if($cmd=~ m/!dns/)
+	{
+		&pBot::Commands::cmd_dns($owner,$chan,$cmd,$message);
+	}
 }
 
 sub irc_onping {
