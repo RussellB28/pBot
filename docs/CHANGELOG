@@ -1,0 +1,17 @@
+---------------------------------------
+               CHANGELOG
+---------------------------------------
+
+** 04/10/2010
+- Docs: Added CHANGELOG to docs
+- Docs: Added INSTALLATION Documents and Moved LICENSE to docs
+- Cmds: Added DNS Module and a DNS Command Handlers
+- Base: Added NOTICE, MODE, KICK, QUIT functions in modules/IRC/Functions.pm that will be used in the future
+- Cmds: Removed NETOPS that used to use /stats P to show a list of operators on a network
+- Base: Removed some code from run.pl that wasnt being used 
+
+** 03/10/2010
+
+- Docs: LICENSE Added
+- Docs: README File Created
+- pBot Base Files Uploaded to Repository
